@@ -12,6 +12,10 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 - I "Tipi" che si possono usare in TypeScript
 - Tipi di ritorno delle funzioni
 - Classi e interfacce
+- Vari esempi su come implementare "l'eredità" tra interfacce, classi astratte e classi
+- Esempi su come usare generics
+- Alcuni trucchi per gestire i null / undefined
+- tsconfig.json info
 
 
 ## Commands
