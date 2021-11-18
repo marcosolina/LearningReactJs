@@ -17,10 +17,14 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 - Alcuni trucchi per gestire i null / undefined
 - tsconfig.json info
 
+## Capitolo 3
+- scope delle variabili
+
+
 
 ## Commands
-
-- npm install typescript
+- npm init // Per inizializzare il projectto
+- npm install typescript // per installare typescript
 - node_modules\.bin\tsc TS_FILE // Compile the TS script
 - node JS_FILE // run the js file
 - node_modules\.bin\tsc // initialise type script (you will get the tsconfig.json file)
