@@ -18,7 +18,14 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 - tsconfig.json info
 
 ## Capitolo 3
-- scope delle variabili
+- Scope delle variabili
+- Differenza tra "var, let, const"
+- Arrow functions
+- "this", "bind, call e apply"
+- Spread, Object.assing, Array.concat
+- "Destucturing" (prendere solo una parte di un oggetto)
+- Rest (Rest of the items)
+
 
 
 
