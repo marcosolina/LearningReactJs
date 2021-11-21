@@ -2,6 +2,8 @@
 
 I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Full-Stack-React-TypeScript-Node-applications/dp/1839219939) book. I'll use this repository to write the exercises provided in the book and possibly some mine experiments.
 
+[Git repo of the book](https://github.com/PacktPublishing/Full-Stack-React-TypeScript-and-Node)
+
 ## Capitolo 1
 
 - Cosa è TypeScript
@@ -27,6 +29,10 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 - Rest (Rest of the items)
 - Array functions
 - Set & Map (Collections)
+- async await callbacks
+  - Nell'esercizio con le fetch ho dovuto fare alcune modifiche:
+    - Usare la vesione "node-fetch": "^2.6.1" perchè quella corrente non supporta più il "require"
+    - Attivare nel tsconfig.json: "moduleResolution": "node"
 
 
 
@@ -36,5 +42,5 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 - npm install typescript // per installare typescript
 - node_modules\.bin\tsc TS_FILE // Compile the TS script
 - node JS_FILE // run the js file
-- node_modules\.bin\tsc // initialise type script (you will get the tsconfig.json file)
+- node_modules\.bin\tsc --init // initialise type script (you will get the tsconfig.json file)
 - .\node_modules\.bin\tsc.cmd --target "ES6" .\getterSetter.ts // Compile to a newer JavaScript target than ES3
