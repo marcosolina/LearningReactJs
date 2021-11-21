@@ -34,7 +34,11 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
     - Usare la vesione "node-fetch": "^2.6.1" perchè quella corrente non supporta più il "require"
     - Attivare nel tsconfig.json: "moduleResolution": "node"
 
-
+## Capitolo 4
+- Single Page Application (SPA)
+- Per far partire la prima SPA ho dovuto installare:
+  - npm i react-router-dom
+  - npm i @types/react-router-dom
 
 
 ## Commands
@@ -44,3 +48,4 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 - node JS_FILE // run the js file
 - node_modules\.bin\tsc --init // initialise type script (you will get the tsconfig.json file)
 - .\node_modules\.bin\tsc.cmd --target "ES6" .\getterSetter.ts // Compile to a newer JavaScript target than ES3
+- npx create-react-app [APP_NAME] --template typescript
