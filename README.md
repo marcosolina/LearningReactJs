@@ -25,6 +25,8 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 - Spread, Object.assing, Array.concat
 - "Destucturing" (prendere solo una parte di un oggetto)
 - Rest (Rest of the items)
+- Array functions
+- Set & Map (Collections)
 
 
 
