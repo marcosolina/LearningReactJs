@@ -40,6 +40,9 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
   - npm i react-router-dom
   - npm i @types/react-router-dom
 
+## Capitolo 5
+- React:
+  - Class Compoents (Vecchio modo di scrivere le SPA)
 
 ## Commands
 - npm init // Per inizializzare il projectto
