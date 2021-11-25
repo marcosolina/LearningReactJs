@@ -43,6 +43,9 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 ## Capitolo 5
 - React:
   - Class Compoents (Vecchio modo di scrivere le SPA)
+  - Functional component
+  - Hooks
+    - L'idea è di abbandonare l'Object Oriented Model e adottare il modello a composizione
 
 ## Commands
 - npm init // Per inizializzare il projectto
