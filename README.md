@@ -47,6 +47,9 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
   - Hooks
     - L'idea è di abbandonare l'Object Oriented Model e adottare il modello a composizione
 
+## Capitolo 6
+- Test con Jest
+
 ## Commands
 - npm init // Per inizializzare il projectto
 - npm install typescript // per installare typescript
