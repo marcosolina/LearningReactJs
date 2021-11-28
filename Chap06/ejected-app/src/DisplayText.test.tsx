@@ -8,6 +8,8 @@ import {
 import DisplayText from "./DisplayText";
 import "@testing-library/jest-dom/extend-expect";
 
+jest.mock("./UserTodos");
+
 afterEach(cleanup);
 
 describe("Test Displaytext", () => {

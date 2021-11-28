@@ -1,4 +1,5 @@
 import React, { useState, FC } from "react";
+import UserTodos from "./UserTodos";
 
 interface DisplayTextProps {
     getUserFullname: (username: string) => Promise<string>;
@@ -7,12 +8,15 @@ interface DisplayTextProps {
 const DisplayText: FC<DisplayTextProps> = ({ getUserFullname }) => {
     const [txt, setTxt] = useState("");
     const [msg, setMsg] = useState("");
+    const [todosControl, setTodoControl] = useState<ReturnType<typeof UserTodos>>();
+
     const onChangeTxt = (e: React.ChangeEvent<HTMLInputElement>) => {
         setTxt(e.target.value);
     }
     const onClickShowMsg = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault();
         setMsg(`Welcome to React testing, ${await getUserFullname(txt)}`);
+        setTodoControl(<UserTodos username={txt} />);
     }
 
     return (
@@ -29,6 +33,9 @@ const DisplayText: FC<DisplayTextProps> = ({ getUserFullname }) => {
             <div>
                 <label data-testid="final-msg">{msg}</label>
             </div>
+            <ul style={{marginTop: "1rem", listStyleType: "none"}}>
+                {todosControl}
+            </ul>
         </form>
     );
 }
