@@ -52,6 +52,9 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 - Nel tsconfig.json devo aggiungere ne compilerOption: "types": ["node", "jest"]
 - Mocking on jest.fn
 - Component mocking
+- VS Code Plugins:
+  - [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
+  
 
 ## Commands
 - npm init // Per inizializzare il projectto
