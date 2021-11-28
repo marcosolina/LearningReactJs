@@ -49,6 +49,7 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 
 ## Capitolo 6
 - Test con Jest
+- Nel tsconfig.json devo aggiungere ne compilerOption: "types": ["node", "jest"]
 
 ## Commands
 - npm init // Per inizializzare il projectto
