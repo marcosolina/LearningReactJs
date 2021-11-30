@@ -1,24 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
+import { useDispatch } from 'react-redux';
+import ContextTesters from "./ContextTester"
 import './App.css';
+import { USER_TYPE } from './store/UserReducer';
 
 function App() {
+
+  const [userId, setUserid] = useState(0);
+  const dispatch = useDispatch(); // Redux hook
+  const onChangeUserId = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log("userid", e.target.value);
+    const useridFromInput = e.target.value ? Number(e.target.value) : 0;
+    setUserid(useridFromInput);
+
+    const usersResponse = await fetch("https://jsonplaceholder.typicode.com/users");
+    if(usersResponse.ok){
+      const users = await usersResponse.json();
+      console.log("users", users);
+      const usr = users.find((userItem: any) => {
+        return userItem && userItem.id === useridFromInput;
+      });
+
+      console.log("usr", usr);
+      dispatch({
+        type: USER_TYPE,
+        payload: {
+          id: usr.id,
+          username: usr.username,
+          email: usr.email,
+          city: usr.address.city
+        }
+      });
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <label>User id</label>
+      <input value={userId} onChange={onChangeUserId}/>
     </div>
   );
 }
