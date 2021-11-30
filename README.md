@@ -54,6 +54,11 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 - Component mocking
 - VS Code Plugins:
   - [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
+
+## Capitolo 7
+- Redux State
+- React Router
+
   
 
 ## Commands
@@ -64,3 +69,4 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 - node_modules\.bin\tsc --init // initialise type script (you will get the tsconfig.json file)
 - .\node_modules\.bin\tsc.cmd --target "ES6" .\getterSetter.ts // Compile to a newer JavaScript target than ES3
 - npx create-react-app [APP_NAME] --template typescript
+- Install Redux: npm i redux react-redux @types/redux @types/react-redux
