@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import { useDispatch } from 'react-redux';
-import ContextTesters from "./ContextTester"
 import './App.css';
 import { USER_TYPE } from './store/UserReducer';
+import UserDisplay from './UserDisplay';
 
 function App() {
 
@@ -39,6 +39,7 @@ function App() {
     <div className="App">
       <label>User id</label>
       <input value={userId} onChange={onChangeUserId}/>
+      <UserDisplay />
     </div>
   );
 }
