@@ -58,6 +58,7 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 ## Capitolo 7
 - Redux State
 - React Router
+- React Context
 
   
 
