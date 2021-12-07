@@ -57,8 +57,8 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 
 ## Capitolo 7
 - Redux State
-- React Router
 - React Context
+- React Router
 
   
 
@@ -71,3 +71,4 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 - .\node_modules\.bin\tsc.cmd --target "ES6" .\getterSetter.ts // Compile to a newer JavaScript target than ES3
 - npx create-react-app [APP_NAME] --template typescript
 - Install Redux: npm i redux react-redux @types/redux @types/react-redux
+- npm i react-router-dom @types/react-router-dom // Install react router
