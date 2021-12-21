@@ -64,6 +64,10 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 ## Capitolo 8
 - Server site development with Node.js and Express
 - *.mjs è la nuova estensione da usare con Node
+- nodemon -> restart Node server quando salvo delle modifiche
+  - npm i nodemon -g
+- express: è un framework che semplifica la gestione di richieste / risposte HTTP
+  - npm i express -s
   
 
 ## Commands
