@@ -65,10 +65,27 @@ I have decided to lear React JS and I bought [this](https://www.amazon.co.uk/Ful
 - Server site development with Node.js and Express
 - *.mjs è la nuova estensione da usare con Node
 - nodemon -> restart Node server quando salvo delle modifiche
-  - npm i nodemon -g
+  - npm i nodemon -g (Alla fine non lo ho installato a livello glovale ma a livello di progetto. Rimuovi la "-g")
 - express: è un framework che semplifica la gestione di richieste / risposte HTTP
   - npm i express -s
-  
+
+## Capitolo 9
+- Con GrapQL è il client che decide che tipo di dati il servizio deve ritornare
+- Creazione e configurazione del progetto
+  - npm i express apollo-server-express @types/express
+  - tsc -init
+  - Creato typeDefs.ts
+- Resolvers:
+  - Sono le funzioni che recuperano o modificano i dati nel datastore
+  - Questi dati sono poi abbinati con quelli definiti nella definizione GraphQL
+  - npm i uuid @types/uuid
+  - npm install @graphql-tools/utils
+- Subscribers:
+  - We have to install PubSub to be able to publish and subscribes to the events
+  - npm install graphql-subscriptions
+  - Il libro usa una versione vecchia... non sono riuscito a capire come fare l'esercizio con la versione nuova
+
+
 
 ## Commands
 - npm init // Per inizializzare il projectto
