@@ -4,6 +4,8 @@
   - [Section 1: Getting started](#section-1-getting-started)
   - [Section 2: Javascript Refresher](#section-2-javascript-refresher)
   - [Section 3: React Basics \& Working With Components](#section-3-react-basics--working-with-components)
+  - [Section 4: React State \& Working with events](#section-4-react-state--working-with-events)
+  - [Section 5: Renderig Lists \& Conditional Content](#section-5-renderig-lists--conditional-content)
 
 ## Section 1: Getting started
 
@@ -189,3 +191,25 @@
 - When you want to provide custom CSS code, the convention is to define the "CSS" file next to the component that it is going to use it, naming the file after the react component: "MyComponent.js", "MyComponent.css"
 - In your custom component, react will make sure to pass only one parameter, the "props". You can call it whatever you want in your function definition, this object will contain all the properties passed to your function componenet
 - props.children it is always provided automatically by react and it is set to the content between the opening and closing tag of my custom component
+
+## Section 4: React State & Working with events
+
+- It is not a mandatory convention to add a "handler" suffix to the functions which will handle the events, like the "click" event: const clickHandler = () => {...}
+- React useState:
+  - It registers the state for a specific component instance
+  - When a state is changed, react will re-evaluate only that component instance
+  - React keeps track of when we call the useState for the first time, so it will track the initial value and use it only the very first time we evaluate the function component
+  - Whenever you update the state, and depende on the previous state you should call the "set state function" in this way:
+    ```javascript
+    setMyState((prevState) => {
+      return { ...prevState, myProp: propValue };
+    });
+    ```
+    we go for this approach because React schedules the set states. So if we have multiple set state and we depend on the previous state value, we this version of the set state we can be sure that React will always use the latest state available when processing our set state
+- Lifting state up: it is when one component needs data generate in a different component in a different "component branch". To make these data available we have to "lift them up" to the closest "common parent component" which will then pass them dowm where needed
+
+## Section 5: Renderig Lists & Conditional Content
+
+- When rendering list react requires a "Key". This is needed because reacts uses that ID to understand what to update/add. If I don't specify the key, react will re-render the whole list again, which will reduce the performance and can lead to bugs because if it's re-creates the elements you might loose the saved state of the components
+- Inline CSS can be added to an element using the "style" attribute, which accepts a js object as parameter. The key of the object is the CSS attribute name that you want to set, and the value is the value that you want to set. If you are trying to set a CSS property which has a "-" as separator, use the "camel case" syntax: "backgournd-color" -> backgroundColor
+-
