@@ -6,6 +6,7 @@
   - [Section 3: React Basics \& Working With Components](#section-3-react-basics--working-with-components)
   - [Section 4: React State \& Working with events](#section-4-react-state--working-with-events)
   - [Section 5: Renderig Lists \& Conditional Content](#section-5-renderig-lists--conditional-content)
+  - [Section 6: Styling React Components](#section-6-styling-react-components)
 
 ## Section 1: Getting started
 
@@ -212,4 +213,18 @@
 
 - When rendering list react requires a "Key". This is needed because reacts uses that ID to understand what to update/add. If I don't specify the key, react will re-render the whole list again, which will reduce the performance and can lead to bugs because if it's re-creates the elements you might loose the saved state of the components
 - Inline CSS can be added to an element using the "style" attribute, which accepts a js object as parameter. The key of the object is the CSS attribute name that you want to set, and the value is the value that you want to set. If you are trying to set a CSS property which has a "-" as separator, use the "camel case" syntax: "backgournd-color" -> backgroundColor
--
+
+## Section 6: Styling React Components
+
+- When I defined simple CSS files, the classes defined in these files are globally available, they are not scoped to a scpecific component/s
+- [Styled components](https://styled-components.com/) it's a package that can help us to scope the CSS style to only certain components
+  - I don't like this approach because I have to define the CSS inside the component file
+- CSS Modules. React provides an alternative, CSS modules. I can continue to keep the CSS definition in a separate file, but I have to add the "module" word before the extension: "MyFile.module.css"
+  - After that I can import this file in my component file "import styles from './MyFile.module.css'"
+  - And use is in my component accessing the classes as jsobject properties
+
+    ```javascript
+    import styles from "./MyFile.module.css";
+
+    <MyComponent className={styles.myclass} />;
+    ```
