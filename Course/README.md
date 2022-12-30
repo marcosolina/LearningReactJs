@@ -7,6 +7,8 @@
   - [Section 4: React State \& Working with events](#section-4-react-state--working-with-events)
   - [Section 5: Renderig Lists \& Conditional Content](#section-5-renderig-lists--conditional-content)
   - [Section 6: Styling React Components](#section-6-styling-react-components)
+  - [Section 7: Debugging React Apps](#section-7-debugging-react-apps)
+  - [Section 8: Time to Practice: A Complete Practice Project](#section-8-time-to-practice-a-complete-practice-project)
 
 ## Section 1: Getting started
 
@@ -220,6 +222,7 @@
 - [Styled components](https://styled-components.com/) it's a package that can help us to scope the CSS style to only certain components
   - I don't like this approach because I have to define the CSS inside the component file
 - CSS Modules. React provides an alternative, CSS modules. I can continue to keep the CSS definition in a separate file, but I have to add the "module" word before the extension: "MyFile.module.css"
+
   - After that I can import this file in my component file "import styles from './MyFile.module.css'"
   - And use is in my component accessing the classes as jsobject properties
 
@@ -228,3 +231,11 @@
 
     <MyComponent className={styles.myclass} />;
     ```
+
+## Section 7: Debugging React Apps
+
+- [React development tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) is it a nice Google Chrome extension which add a couple of "tabs" in the devtool view, for example we will be able to navigate our components and inspect their properties
+
+## Section 8: Time to Practice: A Complete Practice Project
+
+- Just a recap of the modules until here
