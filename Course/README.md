@@ -284,5 +284,12 @@
     ```
 
 - React Portals:
+
   - It helps writing HTML code which is semathically correct
-  - To use portals you have to create an element in the main HTML, which will you link later in the component, so the comonent will be "portal" somewhere
+  - To use portals you have to create an element in the main HTML, which will you link later in the component, so the comonent will be "portal" somewhere.
+    Check [here](https://github.com/marcosolina/LearningReactJs/blob/main/Course/react_code/09-starting-project/public/index.html) and [here](https://github.com/marcosolina/LearningReactJs/blob/main/Course/react_code/09-starting-project/src/components/UI/ErrorModal/ErrorModal.js)
+
+- References (Ref):
+  - They allow us to access other DOM elements and work with them
+  - It can be used for example when I have a form. In these cases I will usually use a "set state" function to update the state at every key stroke. With the usage of ref I can reference the DOM element and get the value when I need
+  - **Rarely** use ref to directly manipulateing the DOM element
