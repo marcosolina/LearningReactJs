@@ -290,6 +290,12 @@
     Check [here](https://github.com/marcosolina/LearningReactJs/blob/main/Course/react_code/09-starting-project/public/index.html) and [here](https://github.com/marcosolina/LearningReactJs/blob/main/Course/react_code/09-starting-project/src/components/UI/ErrorModal/ErrorModal.js)
 
 - References (Ref):
+
   - They allow us to access other DOM elements and work with them
-  - It can be used for example when I have a form. In these cases I will usually use a "set state" function to update the state at every key stroke. With the usage of ref I can reference the DOM element and get the value when I need
+  - It can be used for example when I have a form. In these cases I will usually use a "set state" function to update the state at every key stroke. With the usage of ref I can reference the DOM element and get the value when I need. Check [here](https://github.com/marcosolina/LearningReactJs/blob/main/Course/react_code/09-starting-project/src/components/Users/AddUser/AddUser.js)
   - **Rarely** use ref to directly manipulateing the DOM element
+
+- Controlled vs Uncontrolled components:
+  - When I access values using refs, the component becomes an "uncontrolled" component, that's because React does not controll anymore that component via direct access to the DOM element
+  - It will be a Controlled component if I use the "useState" to read and set the values of the input element
+  -
