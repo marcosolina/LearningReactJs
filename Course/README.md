@@ -9,6 +9,7 @@
   - [Section 6: Styling React Components](#section-6-styling-react-components)
   - [Section 7: Debugging React Apps](#section-7-debugging-react-apps)
   - [Section 8: Time to Practice: A Complete Practice Project](#section-8-time-to-practice-a-complete-practice-project)
+  - [Section 9: Diving Deeper: Working with Fragments, Portals \& "Refs"](#section-9-diving-deeper-working-with-fragments-portals--refs)
 
 ## Section 1: Getting started
 
@@ -19,11 +20,11 @@
 
 - Use "let" if you want to create a variable:
   ```javascript
-  let prop = "hello";
+  let prop = 'hello';
   ```
 - Use "const" if you want to create something that does not change:
   ```javascript
-  const constantValue = "hello";
+  const constantValue = 'hello';
   ```
 - Arrow functions awoids the issue with the "this" keyword
 - Export & Imports
@@ -227,7 +228,7 @@
   - And use is in my component accessing the classes as jsobject properties
 
     ```javascript
-    import styles from "./MyFile.module.css";
+    import styles from './MyFile.module.css';
 
     <MyComponent className={styles.myclass} />;
     ```
@@ -239,3 +240,49 @@
 ## Section 8: Time to Practice: A Complete Practice Project
 
 - Just a recap of the modules until here
+
+## Section 9: Diving Deeper: Working with Fragments, Portals & "Refs"
+
+- JSX Limitations:
+
+  - You cannot retunr more than one "root" JSX element
+  - A workaround could be wrapping the JSX with a "div", but you might end up with a "<div> soup"
+    ```html
+    <div>
+      <div>
+        <div>
+          <h2>Hi there</h2>
+        </div>
+      </div>
+    </div>
+    ```
+  - A proper workaround could be to create a wrapper component
+
+    ```javascript
+    const Wrapper = props => {
+      return props.children;
+    }
+
+    export default Wrapper;
+
+    ...
+    return(
+      <Wrapper>
+        ...
+      </Wrapper>
+    );
+
+    ```
+
+  - React already provides a default wrapper
+
+    ```javascript
+    return <React.Fragment>...</React.Fragment>;
+
+    // OR
+    return <>...</>;
+    ```
+
+- React Portals:
+  - It helps writing HTML code which is semathically correct
+  - To use portals you have to create an element in the main HTML, which will you link later in the component, so the comonent will be "portal" somewhere
