@@ -10,6 +10,7 @@
   - [Section 7: Debugging React Apps](#section-7-debugging-react-apps)
   - [Section 8: Time to Practice: A Complete Practice Project](#section-8-time-to-practice-a-complete-practice-project)
   - [Section 9: Diving Deeper: Working with Fragments, Portals \& "Refs"](#section-9-diving-deeper-working-with-fragments-portals--refs)
+  - [Section 10: Advanced - Handling Side Effects, usind Reducers \& Using the Context API](#section-10-advanced---handling-side-effects-usind-reducers--using-the-context-api)
 
 ## Section 1: Getting started
 
@@ -299,3 +300,43 @@
   - When I access values using refs, the component becomes an "uncontrolled" component, that's because React does not controll anymore that component via direct access to the DOM element
   - It will be a Controlled component if I use the "useState" to read and set the values of the input element
   -
+
+## Section 10: Advanced - Handling Side Effects, usind Reducers & Using the Context API
+
+- Effect or Side Effect:
+
+  - The main job of react library has the job to render the UI and react to user input
+    - We want to evaluate & render JSX
+    - Manage state & props
+    - React to (User) Events & Input
+    - Re-evaluate Component upon State & Prop changes
+    - This is all "baked into" React via the "tools" and features covered in the course (i.e. useState() Hook, Proprs etc)
+  - Side effects are anything else that might happen in the react app, for example:
+    - Store data in Browser Storage
+    - Send HTTP request
+    - Set & Manager Timers
+  - These task **must happen outside of the normal component evaluation** and render cycle - especially since they might block/delay rendering (e.g Http requests)
+  - useEffect() hook:
+
+    - It's a build in hook
+    - it is called with 2 parameters: useEffect(()=>{...}, [dependencies])
+    - The function is what to execute when a dependencies changed
+    - If I specify an empty list of dependencies, the effect will be execute only once, at the first render of the component
+    - Per rule, in the array of dependencies I list all the things that I am using in the effect function
+      - Exceptions (NO NEED TO ADD TO THE DEPENDENCIES LIST):
+        - "set state functions" because React will ensure that they will never change
+        - Build in APIs func like fetch(), localstorage (func and features built in the browser). They are not related to React and also never change
+        - No need to add variables defined OUTSIDE the component (for example a helper func in a separate file). Such variables or function are not created inside of a component function and hence changing them won't affect your component (it will not be re-evaluated is the variable or function changes)
+    - You can return a function, which is called every time before executing the useEffect, except for the very first time. Here an example
+
+      ```javascript
+      useEffect(() => {
+        const timerId = setTimeout(() => {
+          setFormIsValid(
+            enteredEmail.includes('@') && enteredPassword.trim().length > 6
+          );
+        }, 500);
+
+        return () => clearTimeout(timerId); // Cleanup. It is executed before execution of the effect (except for the first time)
+      }, [enteredEmail, enteredPassword]);
+      ```
