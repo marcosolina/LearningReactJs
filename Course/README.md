@@ -340,3 +340,27 @@
         return () => clearTimeout(timerId); // Cleanup. It is executed before execution of the effect (except for the first time)
       }, [enteredEmail, enteredPassword]);
       ```
+
+  - useReducer() is used for state management
+    - used when you have more complex state
+    - can be used as a replacement for useState() if you need a "more powerful state management"
+  - useState() vs useReducer()
+    - use the reducer when useState() becomes cumbersome or you're getting a lot of bugs / uninteded behaviors
+    - useState():
+      - Is the main state management "tool"
+      - Great for independednt peces of state / data
+      - Great if state updates are easy and limited to a few kinds of updates
+    - useReducer()
+      - Great if you need "more power" like function to manipulate the state
+      - Should be considered if you have related pieces of state / date
+      - Can be helpful if you have more complex state updates
+
+- React Context (Context API)
+  - Used to avoid props chains
+  - To create a context you use "React.createContext"
+  - The "React.createContext" returns a component
+  - The compoenents that needs to access the context must be wrapped by the context component
+  - React context is NOT optimzed for high frequency changes! (multiple changes per seconds)
+  - Should not be used to replace ALL component communications and props
+- React hooks:
+  ![hooks rules](pictures/hooks_rules.png)
