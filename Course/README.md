@@ -11,6 +11,7 @@
   - [Section 8: Time to Practice: A Complete Practice Project](#section-8-time-to-practice-a-complete-practice-project)
   - [Section 9: Diving Deeper: Working with Fragments, Portals \& "Refs"](#section-9-diving-deeper-working-with-fragments-portals--refs)
   - [Section 10: Advanced - Handling Side Effects, usind Reducers \& Using the Context API](#section-10-advanced---handling-side-effects-usind-reducers--using-the-context-api)
+  - [Section 11: Practice Project: Building a Food Order App](#section-11-practice-project-building-a-food-order-app)
 
 ## Section 1: Getting started
 
@@ -364,3 +365,5 @@
   - Should not be used to replace ALL component communications and props
 - React hooks:
   ![hooks rules](pictures/hooks_rules.png)
+
+## Section 11: Practice Project: Building a Food Order App
