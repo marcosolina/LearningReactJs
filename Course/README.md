@@ -367,3 +367,24 @@
   ![hooks rules](pictures/hooks_rules.png)
 
 ## Section 11: Practice Project: Building a Food Order App
+
+- Made a new app using all the things learned up until this point
+
+## Section 12: A look behind the scenes of react & optimization techniques
+
+- How does React work:
+  - It's a javascript library which uses components to create and update the UI
+  - There is also the ReactDOM, which is an interface to the web
+  - React does not know anything about the web, it only knwos the components, states, props, context and so on
+  - The ReactDOM is responsible of bringing the things on the screen
+  - When a component whants to draw something to the screen, React will work with something called "Virtual DOM" and then pass it to the ReactDOM
+  - React compares the component tree in the Virtual DOM, if something is changed it will notify the ReactDOM and let him update the UI
+  - Re-Evaluating a component !== Re-Rendering the DOM
+  - Changes to the read DOM are only made for differences between evaluations
+  - Optimisation:
+    - If a parent component needs to be re-rendered, React will also execute all the children function components. This in big apps can be a waste of resources. To avoid React re-rendering components where nothing was changed, we can use React.memo(MyComponent)
+    - The "memo" comes to a cost, so do not abuse of it as it depends on the component where you are applying it if is worth or not
+    - The "React.memo" has a gotcha. When you use the "memo" what React does is "prev.val === current.val". If this is true it wil not re-render the component
+      - If it is comparing primitives every is fine
+      - If it is comparing a function, like when we pass a function in the props, it will not work as function are like objects, and they might be re-created at every re-render
+      - In this cases you have to use "callBack" hook so we can store a function across component execution
