@@ -387,4 +387,21 @@
     - The "React.memo" has a gotcha. When you use the "memo" what React does is "prev.val === current.val". If this is true it wil not re-render the component
       - If it is comparing primitives every is fine
       - If it is comparing a function, like when we pass a function in the props, it will not work as function are like objects, and they might be re-created at every re-render
-      - In this cases you have to use "callBack" hook so we can store a function across component execution
+      - In this cases you have to use "callBack" hook so we can store a function across component execution [here](https://github.com/marcosolina/LearningReactJs/blob/main/Course/react_code/12-starting-setup/src/App.js)
+- State:
+
+  - When you use the "useState" hook, react will take care of it and ensure that it will "re-evaluated" only once even if you have subsequents re-rendering of your function component
+  - It will re-evaluate the useState only if the component is removed from the DOM and then re-attached
+  - When you call a function created by "useState" to update your state, the change in the DOM (or the state) does not happen right away. You update state request is scheduled and put in the queue
+  - React does not garantee that the state will be changed right away, but it guarantees that the order of your state changes will be prevserved
+  - Because of this "scheduling stage update", you should call the second version of your set state function if the new state depends on the previous state
+
+    ```javascript
+    const [showPraragraph, setShowParagraph] = useState(false);
+
+    const toggleParagraphHandler = () => {
+      setShowParagraph((prevShowPragraph) => !prevShowPragraph);
+    };
+    ```
+
+  - If I have more than one "setState" one after the other one, React will batch these state changes together and executed them like if it were one
