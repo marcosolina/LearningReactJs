@@ -405,3 +405,19 @@
     ```
 
   - If I have more than one "setState" one after the other one, React will batch these state changes together and executed them like if it were one
+
+## Section 13: An alternative way of building components: Class-based Components
+
+- Class-based components exists and they are an alternative way
+- Class-based components is the "old way" of building React apps
+- When React v < 16.8 you had to use Class components to use state
+- With React v >= 16.8 they have introduced hooks which can be used in functional components to save the state
+- Hooks cannot be used in Class-based components
+- With functional components we use Hooks to manage side effects (life cycle), wiht class-based there are specific method to manage the life-cycle. Here some examples:
+  - **componentDidMount()** -> useEffect(...,[])
+  - **componentDidUpdate()** -> useEffect(...,[someDependencies])
+  - **componentWillUnmount()** -> useEffect(() => {return ()=>{}}),[])
+- Error boundaries:
+  - It can happen that something you don't manage in your app will fail with an error. For example an HTTP request
+  - In these cases you can crate an ErrorBoundary component (The name it is up to you) which will catch the errors and manage them in the way you want
+  - You cannot use this kind of components in functional components at the moment (2022)
