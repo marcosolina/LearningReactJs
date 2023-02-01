@@ -421,3 +421,5 @@
   - It can happen that something you don't manage in your app will fail with an error. For example an HTTP request
   - In these cases you can crate an ErrorBoundary component (The name it is up to you) which will catch the errors and manage them in the way you want
   - You cannot use this kind of components in functional components at the moment (2022)
+
+## Section 14: Sending Http Request
