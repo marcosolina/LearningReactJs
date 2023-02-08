@@ -22,11 +22,11 @@
 
 - Use "let" if you want to create a variable:
   ```javascript
-  let prop = 'hello';
+  let prop = "hello";
   ```
 - Use "const" if you want to create something that does not change:
   ```javascript
-  const constantValue = 'hello';
+  const constantValue = "hello";
   ```
 - Arrow functions awoids the issue with the "this" keyword
 - Export & Imports
@@ -230,7 +230,7 @@
   - And use is in my component accessing the classes as jsobject properties
 
     ```javascript
-    import styles from './MyFile.module.css';
+    import styles from "./MyFile.module.css";
 
     <MyComponent className={styles.myclass} />;
     ```
@@ -334,7 +334,7 @@
       useEffect(() => {
         const timerId = setTimeout(() => {
           setFormIsValid(
-            enteredEmail.includes('@') && enteredPassword.trim().length > 6
+            enteredEmail.includes("@") && enteredPassword.trim().length > 6
           );
         }, 500);
 
@@ -423,3 +423,9 @@
   - You cannot use this kind of components in functional components at the moment (2022)
 
 ## Section 14: Sending Http Request
+
+## Section 15: Building custom react hook
+
+- Are regular functions which can contain **stateful** logic
+- Can use other React hooks and React state
+- The name of the function you create **must** start with the "use" prefix (useMyCustomHook(...))
