@@ -424,8 +424,31 @@
 
 ## Section 14: Sending Http Request
 
+- Some exercises
+
 ## Section 15: Building custom react hook
 
 - Are regular functions which can contain **stateful** logic
 - Can use other React hooks and React state
 - The name of the function you create **must** start with the "use" prefix (useMyCustomHook(...))
+
+## Section 16: Working with Forms & User Input
+
+- Forms and inputs can assume different states
+  - One or more inputs are invalid
+  - All inputs are valid
+- When an input is invalid you might want:
+  - Show specific error message
+  - Ensure form can't be submitted
+- When all the input are valid you want to allow form to be submitted
+- When to validate?:
+  - When the form is submitted
+    - Allow the user to enter a valid value before warning him / her
+    - Avoid unneccesary warnings but maybe present the feedback "too late"
+  - When the input loses focus
+    - Allow the user to enter a valid value before warning him / her
+    - Very useful for untouched forms
+    - If you only validate on lusing focus, if a value was invalid, you do not validate the value anymore until the user goes back to the fiels
+  - On every keystroke or change to an input
+    - Warns the user before he / she had a change of entering valid values
+    - If applied only on invalid inputs, has the potential of providing more direct feedback
